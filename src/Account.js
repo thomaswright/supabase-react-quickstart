@@ -79,6 +79,7 @@ const Account = ({ session }) => {
             size={150}
             onUpload={(url) => {
               setAvatarUrl(url);
+              updateProfile({ username, website, avatar_url: url });
             }}
           />
           <div>Email: {session.user.email}</div>
